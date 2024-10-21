@@ -1,5 +1,6 @@
 package com.abhi.workdoneapp.data
 
+import android.util.Log
 import com.abhi.workdoneapp.base.WorkType
 import com.abhi.workdoneapp.data.Local.TasksDao
 import com.abhi.workdoneapp.di.ApplicationScope
@@ -19,7 +20,7 @@ class DefaultTaskRepository @Inject constructor(
     @DefaultDispatcher private val dispatcher: CoroutineDispatcher,
     @ApplicationScope private val scope: CoroutineScope
 ) : TaskRepository {
-    override suspend fun createTask(title : String, description : String, workType : WorkType): String {
+    override suspend fun createTask(title : String, description : String): String {
         //generating id would be a complex operation, so we are doing it on different thread
         val taskID = withContext(dispatcher){
             UUID.randomUUID().toString()

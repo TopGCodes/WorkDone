@@ -13,11 +13,17 @@ object Versions {
     const val lifecyccleversion = "2.4.0"
     const val work_version = "2.9.1"
     const val room_version = "2.6.1"
+    const val material_version = "1.3.0"
+}
+
+object jetpack{
+    const val material3 ="androidx.compose.material3:material3:${Versions.material_version}"
 }
 
 object hilt {
     const val hiltandroid = "com.google.dagger:hilt-android:${Versions.hiltversion}"
     const val kaptcompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltversion}"
+    const val navigationCompose = "androidx.hilt:hilt-navigation-compose:${Versions.hiltversion}"
 }
 
 object JetpackNavigation {

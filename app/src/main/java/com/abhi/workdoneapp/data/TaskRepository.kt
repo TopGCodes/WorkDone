@@ -8,13 +8,11 @@ interface TaskRepository {
 
     fun getAllTasksStream(): Flow<List<Task>>
 
-    suspend fun createTask(title : String, description : String, workType: WorkType): String
+    suspend fun createTask(title : String, description : String): String
 
     suspend fun deleteTask(id : String)
 
     suspend fun updatetask(id : String, task : String, description: String)
 
     suspend fun getTaskById(id : String) : Task?
-
-
 }

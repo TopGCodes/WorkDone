@@ -71,8 +71,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    //material 3
+    implementation(jetpack.material3)
+
     //Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose.v120)
     kapt(libs.hilt.android.compiler)
 
     //Network

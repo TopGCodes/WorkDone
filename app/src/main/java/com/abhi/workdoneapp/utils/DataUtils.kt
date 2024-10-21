@@ -5,7 +5,7 @@ import com.abhi.workdoneapp.data.Task
 
 // Task to Local
 fun Task.toLocal() = LocalTask(
-    id = id.toString(),
+    id = id,
     title =  title,
     description = description,
     isCompleted = false,
@@ -21,3 +21,4 @@ fun LocalTask.toExternal() = Task(
 
 @JvmName("localtoexternal")
 fun List<LocalTask>.toExternal() = map(LocalTask::toExternal)
+
